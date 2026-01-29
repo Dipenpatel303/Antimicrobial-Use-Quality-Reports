@@ -6,9 +6,7 @@
 ***********************************************************************************
        Project:  NHSN AU Data Validation Reports
 
-		Created: Yusuf
-
-		Modified: Dipen M Patel
+		Created: Dipen M Patel
 
         Date: June 2025
 
@@ -324,18 +322,18 @@ ods pdf text=" ";
 ods pdf text=" ";
 ods pdf text="^S={font_weight=bold font_size=14pt just=left font_face='Cambria' } Abbreviations used in this Document:";
 ods pdf text=" ";
-ods pdf text="ADT – Admission/Discharge/Transfer ";
-ods pdf text="ASP – Antimicrobial Stewardship Program ";
-ods pdf text="AU – Antimicrobial Use ";
-ods pdf text="BCMA – Bar Code Medication Administration ";
-ods pdf text="ED – Emergency Department ";
-ods pdf text="eMAR – electronic Medication Administration Record";
-ods pdf text="FACWIDE or FACWIDEIN – Facility Wide Inpatient ";
+ods pdf text="ADT Â– Admission/Discharge/Transfer ";
+ods pdf text="ASP Â– Antimicrobial Stewardship Program ";
+ods pdf text="AU Â– Antimicrobial Use ";
+ods pdf text="BCMA Â– Bar Code Medication Administration ";
+ods pdf text="ED Â– Emergency Department ";
+ods pdf text="eMAR Â– electronic Medication Administration Record";
+ods pdf text="FACWIDE or FACWIDEIN Â– Facility Wide Inpatient ";
 ods pdf text="IM - Intramuscular";
-ods pdf text="IQR – Interquartile range";
+ods pdf text="IQR Â– Interquartile range";
 ods pdf text="IV - Intravenous ";
-ods pdf text="NHSN – National Healthcare Safety Network";
-ods pdf text="OR – Operating Room ";
+ods pdf text="NHSN Â– National Healthcare Safety Network";
+ods pdf text="OR Â– Operating Room ";
 ods pdf text=" ";
 ods pdf text=" ";
 ods pdf text=" ";
@@ -528,7 +526,7 @@ run;
 	 %end;
      
 	 %decor5(%str(For an individual drug, available antimicrobial days were available for at least one month, but not available for at least one of the other two months during this quarter.),
-	                   %str(For an individual drug, review your eMAR/BCMA system antimicrobial day counts to ensure the vendor system has included them in that month’s report.  If no antimicrobial days are available for any drugs for a given month, ensure that NHSN AU Option data is included in that month’s NHSN Reporting Plan and that data has been uploaded appropriately.))
+	                   %str(For an individual drug, review your eMAR/BCMA system antimicrobial day counts to ensure the vendor system has included them in that monthÂ’s report.  If no antimicrobial days are available for any drugs for a given month, ensure that NHSN AU Option data is included in that monthÂ’s NHSN Reporting Plan and that data has been uploaded appropriately.))
 	%decor2;
 *4-DP=0 or missing;
 
@@ -558,7 +556,7 @@ run;
 	 %end;
      
 	 %decor5(%str(For an individual drug, available days present were available for at least one month, but not available for at least one of the other two months during this quarter.),
-	                   %str(For an individual drug, review your ADT system days present data to ensure the vendor system has included them in that month’s report.  If no days present are available for any drugs for a given month, ensure that NHSN AU Option data is included in that month’s NHSN Reporting Plan and that data has been uploaded appropriately.))
+	                   %str(For an individual drug, review your ADT system days present data to ensure the vendor system has included them in that monthÂ’s report.  If no days present are available for any drugs for a given month, ensure that NHSN AU Option data is included in that monthÂ’s NHSN Reporting Plan and that data has been uploaded appropriately.))
 	 %decor2; */
 *********************************************+ DRUG LEVEL +*******************************************************************; 
 
@@ -623,7 +621,7 @@ quit;
 			where year(summaryYM)=&year and qtr(summaryYM)=&quarter and orgid=%scan(&org,&i, '/');
 		quit;
 	%end;
-	 %decor5(%str(Ceftriaxone is commonly given via the IM route in the ED.  If the facility reports ED antimicrobial use into the NHSN AU Option, this flag can be used as an indicator to ensure that IM antimicrobial days are accurately pulling into the AU Option and that ED are accurately pulling into the AU Option.  If antimicrobial days for the ED location are present, it would be unlikely than none of the ceftriaxone use was given via the IM route.  If your facility did not report any ED location data, this report will read “No flags identified”.   ),
+	 %decor5(%str(Ceftriaxone is commonly given via the IM route in the ED.  If the facility reports ED antimicrobial use into the NHSN AU Option, this flag can be used as an indicator to ensure that IM antimicrobial days are accurately pulling into the AU Option and that ED are accurately pulling into the AU Option.  If antimicrobial days for the ED location are present, it would be unlikely than none of the ceftriaxone use was given via the IM route.  If your facility did not report any ED location data, this report will read Â“No flags identifiedÂ”.   ),
                        %str(For the ED location, review the data in your eMAR/BCMA system to determine if your vendor system is not including the IM route of administration for your ceftriaxone antimicrobial day counts.  If this is the case, work with the vendor to ensure that IM routes are accurately pulled into the antimicrobial days count.))
 	 %decor2;
 
@@ -656,7 +654,7 @@ quit;
 		quit;
 	%end;
 
-	 %decor5(%str(Cefazolin is commonly given via the IV route for surgical prophylaxis in the OR.  If the facility reports OR antimicrobial use into the NHSN AU Option, this flag can be used as an indicator to ensure that OR antimicrobial days are accurately pulling into the AU Option.  If antimicrobial days for the OR location are present, it would be unlikely than no cefazolin use was given in this location.  It would also be warranted to check if other agents used for prophylaxis (e.g. vancomycin) are also omitted from your OR antimicrobial days report.   If your facility did not report any OR location data, this report will read “No flags identified”.  ),
+	 %decor5(%str(Cefazolin is commonly given via the IV route for surgical prophylaxis in the OR.  If the facility reports OR antimicrobial use into the NHSN AU Option, this flag can be used as an indicator to ensure that OR antimicrobial days are accurately pulling into the AU Option.  If antimicrobial days for the OR location are present, it would be unlikely than no cefazolin use was given in this location.  It would also be warranted to check if other agents used for prophylaxis (e.g. vancomycin) are also omitted from your OR antimicrobial days report.   If your facility did not report any OR location data, this report will read Â“No flags identifiedÂ”.  ),
                        %str(For the OR location, review the data in your eMAR/BCMA system to determine if your vendor system is accurately including ALL antimicrobial days.  If this is not the case, work with the vendor to ensure that the OR antimicrobial days are being pulled appropriately.))
    %decor2;
 *8-For drugs given once daily: sum of routes NOT = total DOT / / However we chose to tolerate a difference of less than 5;
@@ -814,7 +812,7 @@ quit;
 	          %end;
 	%end;
 
-	%decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for FACWIDEIN antimicrobial days for a specific drug.  To ensure that uncommonly used agents don’t make this flag too frequently, this is only analyzed for the top 20 antimicrobials used statewide.  If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+	%decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for FACWIDEIN antimicrobial days for a specific drug.  To ensure that uncommonly used agents donÂ’t make this flag too frequently, this is only analyzed for the top 20 antimicrobials used statewide.  If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
 	                  %str(If a facility has a different patient population, significantly more or fewer days present than the previous year, or if significant changes in antimicrobial days for a specific drug from the previous year are already known, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data and check to ensure surveillance software is accurately pulling eMAR/BCMA data and attributing it to the correct location.  If all technical problems are ruled out, consider targeted stewardship interventions to discover rationale and improve antibiotic use, if necessary, as determined by the ASP.))
 	%decor2;
 
@@ -854,7 +852,7 @@ quit;
 	           %end;
 	%end;
 
-    %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is less than the median – 2 times the IQR for the previous quarter, this report will flag for FACWIDEIN antimicrobial days for a specific drug.  To ensure that uncommonly used agents don’t make this flag too frequently, this is only analyzed for the top 20 antimicrobials used statewide.  If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+    %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is less than the median Â– 2 times the IQR for the previous quarter, this report will flag for FACWIDEIN antimicrobial days for a specific drug.  To ensure that uncommonly used agents donÂ’t make this flag too frequently, this is only analyzed for the top 20 antimicrobials used statewide.  If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
                        %str(If a facility has a different patient population, significantly more or fewer days present than the previous year, or if significant changes in antimicrobial days for a specific drug from the previous year are already known, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data and check to ensure surveillance software is accurately pulling eMAR/BCMA data and attributing it to the correct location.  If all technical problems are ruled out, consider targeted stewardship interventions to discover rationale and improve antibiotic use, if necessary, as determined by the ASP.))
 	%decor2;
 ************************************************** LOCATION LEVEL *************************************************************;
@@ -1036,7 +1034,7 @@ quit;
 			 %decor1(Location-Level Days Present GREATER than Outlying Upper Boundary);
 	        %end;
 	%end;
-    %decor5(%str(For historical comparison, we compare this metric to the median days present of the same quarter from the previous calendar year.  If the days present from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+    %decor5(%str(For historical comparison, we compare this metric to the median days present of the same quarter from the previous calendar year.  If the days present from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
 	                  %str(This warrants a determination if significant changes have occurred in NHSN unit mapping.  If a unit has a different patient population or significantly more or fewer days present than the previous year, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data.))
 	 %decor2;
 
@@ -1073,7 +1071,7 @@ quit;
 	           %end;
 	%end;
     
-    %decor5(%str(For historical comparison, we compare this metric to the median days present of the same quarter from the previous calendar year.  If the days present from this quarter is less than the median – 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+    %decor5(%str(For historical comparison, we compare this metric to the median days present of the same quarter from the previous calendar year.  If the days present from this quarter is less than the median Â– 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
                       %str(This warrants a determination if significant changes have occurred in NHSN unit mapping.  If a unit has a different patient population or significantly more or fewer days present than the previous year, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data.))
     %decor2;
 /* 14-Large change of AU Rate in each Facility's  Locations*/
@@ -1162,7 +1160,7 @@ quit;
 	    %end;
 	%end;
    
-     %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+     %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is greater than the median + 2 times the IQR for the previous quarter, this report will flag for an individual location. If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
                        %str(This warrants a determination if significant changes have occurred in NHSN unit mapping.  If a unit has a different patient population, significantly more or fewer days present than the previous year, or if significant changes in antimicrobial days for a specific drug from the previous year are already known, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data and check to ensure surveillance software is accurately pulling eMAR/BCMA data and attributing it to the correct location.  If all technical problems are ruled out, consider targeted stewardship interventions to discover rationale and improve antibiotic use for the unit, if necessary, as determined by the ASP.))
 	 %decor2;
 
@@ -1199,7 +1197,7 @@ quit;
 		 %decor1(Location-level AU Rate LESS than  Outlying Upper Boundary);
 	    %end;
 	%end;
-     %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is less than the median – 2 times the IQR for the previous quarter, this report will flag for an individual location.  If historical data are not available from the same quarter of the previous calendar year, this report will read “Not Enough Historical Data Available”.),
+     %decor5(%str(For historical comparison, we compare this metric to the median AU rate of the same quarter from the previous calendar year.  If the AU rate from this quarter is less than the median Â– 2 times the IQR for the previous quarter, this report will flag for an individual location.  If historical data are not available from the same quarter of the previous calendar year, this report will read Â“Not Enough Historical Data AvailableÂ”.),
                         %str(This warrants a determination if significant changes have occurred in NHSN unit mapping.  If a unit has a different patient population, significantly more or fewer days present than the previous year, or if significant changes in antimicrobial days for a specific drug from the previous year are already known, this flag can typically be disregarded.  If this is not the case, check with vendor to ensure surveillance software is accurately pulling and reporting ADT data and check to ensure surveillance software is accurately pulling eMAR/BCMA data and attributing it to the correct location.  If all technical problems are ruled out, consider targeted stewardship interventions to discover rationale and improve antibiotic use for the unit, if necessary, as determined by the ASP.))
 	 %decor2;
 
@@ -1318,6 +1316,7 @@ ods excel close;
 
 /*Clear Log Window ;*/
 DM "log; clear; ";
+
 
 
 
