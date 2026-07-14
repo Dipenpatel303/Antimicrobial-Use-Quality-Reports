@@ -1,0 +1,28 @@
+NOTE: Jenner v1.5.30 (build v1.5.30+unknown.20260714T043649Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA audata
+
+NOTE: Processing inline DATALINES (7 lines)
+
+NOTE: Read 7 rows from DATALINES.
+NOTE: Wrote audata (7 rows, 5 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table indic1 created.
+NOTE: PROC SQL statement used.
+NOTE: Option TITLE changed to Antimicrobial Days Reported for any Drug when Days Present Reported as Zero.
+NOTE: PROC PRINT data=indic1
+
+NOTE: PROC PRINT completed: 2 observations printed, 5 variables
+NOTE: PROC SQL 
+
+NOTE: Table dot created.
+NOTE: PROC SQL statement used.
+NOTE: Option TITLE changed to Pooled Days of Therapy by Facility.
+NOTE: PROC PRINT data=dot
+
+NOTE: PROC PRINT completed: 2 observations printed, 2 variables

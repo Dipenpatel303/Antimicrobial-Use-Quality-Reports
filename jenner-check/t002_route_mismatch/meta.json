@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_route_mismatch",
+  "source_file": "Data Validation-DP.sas",
+  "source_blob_sha": "810686152dd0e234a92aa0f12fa2f355afce2aaf",
+  "source_commit": "c2fab89b0c39405276f64b6911bea43ecd7979cd",
+  "notes": "The DOT-recalculation DATA step (total_count=sum of routes, diff, orgid 44440 delete) plus the route-mismatch classification (verbatim IN-list logic) run against an 8-row mock of summaryau_e matching the columns the repo reads. Flags PO-only / IV-only / PO+IV mismatches."
+}

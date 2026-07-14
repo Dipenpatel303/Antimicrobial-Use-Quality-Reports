@@ -1,0 +1,7 @@
+                                        AU Validation reporting period: Q4-2019
+
+
+quarter  year  valid
+-------  ----  -----
+      4  2019  YES
+
