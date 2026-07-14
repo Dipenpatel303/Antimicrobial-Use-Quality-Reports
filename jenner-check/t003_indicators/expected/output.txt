@@ -1,0 +1,18 @@
+                      Antimicrobial Days Reported for any Drug when Days Present Reported as Zero
+
+
+Org ID   Location                  Drug  Antimicrobial Days  Days Present
+------  ---------  --------------------  ------------------  ------------
+ 10017  ICU        CEFTRX - CEFTRIAXONE                  15             0
+ 10100  FACWIDEIN  AZITH - AZITHROMYCIN                   8             0
+
+                      Antimicrobial Days Reported for any Drug when Days Present Reported as Zero
+
+                                           Pooled Days of Therapy by Facility
+
+
+Org ID  Pooled Days of Therapy
+------  ----------------------
+ 10017                     105
+ 10100                     123
+

@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_time_macro",
+  "source_file": "Data Validation-DP.sas",
+  "source_blob_sha": "810686152dd0e234a92aa0f12fa2f355afce2aaf",
+  "source_commit": "c2fab89b0c39405276f64b6911bea43ecd7979cd",
+  "notes": "The %time macro (verbatim) derives the reporting quarter/year from today() via qtr(intnx('qtr',today(),-1)); a small caller confirms the derived quarter is a valid 1-4 value. No external data needed."
+}

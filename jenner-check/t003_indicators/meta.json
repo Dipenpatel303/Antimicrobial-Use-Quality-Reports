@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_indicators",
+  "source_file": "Data Validation-DP.sas",
+  "source_blob_sha": "810686152dd0e234a92aa0f12fa2f355afce2aaf",
+  "source_commit": "c2fab89b0c39405276f64b6911bea43ecd7979cd",
+  "notes": "The days-present validation indicator (indic1: antimicrobialDays>0 and numDaysPresent=0) and the pooled days-of-therapy aggregation, run against a 7-row mock of the AU data matching the columns the repo's indicator queries read."
+}

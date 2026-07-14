@@ -1,0 +1,13 @@
+                                                  Drug Route Mismatch
+
+
+Org ID                  Drug  IM  IV  Oral  Respiratory             Mismatch Type
+------  --------------------  --  --  ----  -----------  ------------------------
+ 10017  AMOX - AMOXICILLIN     0   0    12            0
+ 10017  AMOX - AMOXICILLIN     3   0     0            0  Should be PO only
+ 10017  MERO - MEROPENEM       0   8     0            0
+ 10017  MERO - MEROPENEM       2   0     0            0  Should be IV only
+ 10100  AZITH - AZITHROMYCIN   0   0     5            0
+ 10100  AZITH - AZITHROMYCIN   4   0     0            0  Should be PO and IV only
+ 10100  CEFAZ - CEFAZOLIN      0   6     0            0
+
